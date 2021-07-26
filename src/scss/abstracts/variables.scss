@@ -53,13 +53,26 @@ $media-expressions: (
   --color-black: #000;
   --color-grey: #999;
   --color-blue: #39f;
+  --color-orange: #fe992a;
+  --color-orange-transparent: #ffba6e;
+  --color-light: #737c85;
+  --color-coral: #e6726f;
 
   // Fonts
-  --font-sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  --font-serif: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-sans-serif: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-serif: 'Quicksand', 'Times', Baskerville, 'Georgia', serif;
+  --font-sans: 'Droid Serif', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-content: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+  @font-face {
+    font-family: 'Droid Serif';
+    src: url('../../fonts/DroidSans-Bold.woff') format('woff'), url('../../fonts/DroidSans-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
 
   // Body base
-  --base-background-color: var(--color-black);
+  --base-background-color: var(--color-white);
   --base-font-family: var(--font-sans-serif);
   --base-font-size: 1.6rem;
   --base-line-height: 1.2;
@@ -94,4 +107,8 @@ $media-expressions: (
   --headings-sizes-h4: 2.1rem;
   --headings-sizes-h5: 1.7rem;
   --headings-sizes-h6: 1.5rem;
+
+  // Layout
+  --container-desktop-horizontal-padding: 5px;
+  --container-desktop-width: 960px;
 }

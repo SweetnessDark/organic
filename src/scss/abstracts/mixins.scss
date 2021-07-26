@@ -228,3 +228,10 @@ $animation-speed: 0.3s !default;
   &:-ms-input-placeholder {@content;}
   &.placeholder {@content;}
 }
+
+@mixin container {
+  padding-right: var(--container-desktop-horizontal-padding);
+  padding-left: var(--container-desktop-horizontal-padding);
+  max-width: var(--container-desktop-width);
+  margin: 0 auto;
+}
