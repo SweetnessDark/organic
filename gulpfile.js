@@ -1,136 +1,168 @@
-//Whatch - слежение за файлами
-//Dest - функция при которой файлы с одной папки перебрасываються в другую папку
-//Parallel - одновременный запуск большого количества функций
-//Series - функция которая запускает последовательную операцию(похожа на Parallel)
+/**
+ *
+ *  Web Starter Kit
+ *  Copyright (c) 2020 JustCoded.
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the "Software"), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
 
-const {src, dest, watch, parallel, series} = require('gulp');
+ *  The above copyright notice and this permission notice shall be included in all
+ *  copies or substantial portions of the Software.
 
-//Плагин для конвертации файлов scss в css
-const scss = require('gulp-sass');
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *  SOFTWARE.
+ *
+ */
 
-//Плагин для обьединения большого количества файлов в один файл
-const concat = require('gulp-concat');
+'use strict';
 
-//Плагин для атоматического обновления страницы
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const browserSyncInstance = require('browser-sync').create();
 
-//Плагин для минификации файлов js
-const uglify = require('gulp-uglify-es').default;
+const global = require('./gulp-config.js');
 
-//Плагин для лучшей совместимости с другими браузерами
-const autoprefixer = require('gulp-autoprefixer');
+const cleanBuild = require('./tasks/clean-build');
+const lintHtml = require('./tasks/lint-html');
+const buildHtml = require('./tasks/build-html');
+const buildStyles = require('./tasks/build-styles');
+const buildStylesCustom = require('./tasks/build-styles-custom');
+const buildStylesVendors = require('./tasks/build-styles-vendors');
+const lintJs = require('./tasks/lint-js');
+const buildJs = require('./tasks/build-js');
+const buildImages = require('./tasks/build-images');
+const copyFiles = require('./tasks/copy-files');
+const copyFilesProd = require('./tasks/copy-files-production');
+const browserSync = require('./tasks/browser-sync-server');
+const watch = require('./tasks/watch');
 
-//Плагин для сжатия и минифицирования картинок
-const imagemin = require('gulp-imagemin');
+/**
+ * Clean build folders
+ */
+gulp.task(global.task.cleanBuild, cleanBuild());
 
-//Плагин для удаления ненужной папки или папки в которой много мусора
-const del = require('del');
+/**
+ * Lint HTML
+ */
+gulp.task(global.task.lintHtml, lintHtml());
 
-// const postcss = require('postcss-sort-media-queries');
-const { css } = require('jquery');
+/**
+ * Template HTML
+ */
+gulp.task(global.task.buildHtml, buildHtml());
 
-//  function postcss([
-//     sortMediaQueries({
-//       sort: 'desktop-first'
-//     })
-//   ]) {
-//     process(css);
-//   }
+/**
+ * Build styles for application
+ */
+gulp.task(global.task.buildStyles, buildStyles());
 
-//Функция для удаления папки Dist
-function cleanDist() {
-  return del('dist')
-}
+/**
+ * Build styles custom files listed in the config
+ */
+gulp.task(global.task.buildStylesCustom, buildStylesCustom());
 
-//Функция для автообновления страницы
-function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: 'app/'
-    }
-  });
-}
+/**
+ * Build styles for vendor
+ */
+gulp.task(global.task.buildStylesVendors, buildStylesVendors());
 
-//Функция для сжатия картинок
-function images() {
-  return src('app/images/**/*')
-  .pipe(imagemin([
-    //Сжатие изображений Gif
-    imagemin.gifsicle({interlaced: true}),
-    //Сжатие изображений Jpeg
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    //Сжатие изображений Png
-    imagemin.optipng({optimizationLevel: 5}),
-    //Сжатие изображений Svg
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })
-]))
-//Перенос изображений сразу в папку dist в папку images
-  .pipe(dest('dist/images'))
-}
+/**
+ * Lint JS
+ */
+gulp.task(global.task.lintJs, lintJs());
 
-//Функция для стилей css и scss
-function styles() {
-  return src('app/scss/style.scss')
-  //Минифицирует файлы css
-  .pipe(scss({outputStyle: 'compressed'}))
-  //Создаёт файл css и переносит все данные из файла scss
-  .pipe(concat('style.min.css'))
-  //Поддержка для всех браузеров
-  .pipe(autoprefixer({
-    overrideBrowserlist: ['last 10 version']
-  }))
-  // .pipe(postcss('app/css/style.min.css'), css)
-  //Перенос сразу в папку app в папку css
-  .pipe(dest('app/css'))
-  //Автообновление страницы
-  .pipe(browserSync.stream())
-}
+/**
+ * Fix JS files
+ */
+gulp.task(global.task.fixJs, lintJs());
 
-//Функция для сбора всех файлов в папке app и перенос в папку Dist
-function build() {
-  return src([
-    'app/css/style.min.css',
-    'app/fonts/**/*',
-    'app/js/main.min.js',
-    'app/*.html'
-  ], {base: 'app'})
-  //Перенос в папку Dist
-  .pipe(dest('dist'))
-}
+/**
+ * Build JS
+ */
+gulp.task(global.task.buildJs, buildJs());
 
-//Функция для слежения за файлами
-function watching() {
-  watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/*.html']).on('change', browserSync.reload)
-}
+/**
+ * Copy & minify images
+ */
+gulp.task(global.task.buildImages, buildImages());
 
-//Функция для минифицирования файлов js
-function scripts() {
-  return src([
-    'node_modules/jquery/dist/jquery.js',
-    'app/js/main.js'
-  ])
-  //Создаёт единый файл js который забирает все данные с других файлов js
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  //Перенос в папку js
-  .pipe(dest('app/js'))
-  //Автообновление страницы
-  .pipe(browserSync.stream())
-}
+/**
+ * Copy folders to the build folder
+ */
+gulp.task(global.task.copyFiles, copyFiles());
 
-exports.styles = styles;
-exports.watching = watching;
-exports.browsersync = browsersync;
-exports.scripts = scripts;
-exports.images = images;
-exports.cleanDist = cleanDist;
+/**
+ * Copy folders to the production folder
+ */
+gulp.task(global.task.copyFilesProd, copyFilesProd());
 
-exports.build = series(cleanDist, images, build);
-exports.default = parallel(scripts, browsersync, watching);
+/**
+ * Start browserSync server
+ */
+gulp.task(global.task.browserSync, browserSync({ browserSyncInstance }));
+
+/**
+ * Watch for file changes
+ */
+gulp.task(global.task.watch, watch({ browserSyncInstance }));
+
+/**
+ * Develop mode - with browser sync, file watch & live reload
+ */
+gulp.task('default', gulp.series(
+  global.task.cleanBuild,
+  global.task.lintJs,
+  gulp.parallel(
+    gulp.series(
+      global.task.buildHtml,
+      global.task.lintHtml,
+    ),
+    gulp.series(
+      global.task.buildStyles,
+      global.task.buildStylesCustom,
+      global.task.buildStylesVendors,
+    ),
+    gulp.series(
+      global.task.buildJs,
+    ),
+  ),
+  global.task.buildImages,
+  global.task.copyFiles,
+  gulp.parallel(
+    global.task.browserSync,
+    global.task.watch,
+  ),
+));
+
+/**
+ * Production mode - creating production folder without unnecessary files
+ */
+gulp.task(global.task.build, gulp.series(
+  global.task.cleanBuild,
+  global.task.lintJs,
+  gulp.parallel(
+    gulp.series(
+      global.task.buildHtml,
+      global.task.lintHtml,
+    ),
+    gulp.series(
+      global.task.buildStyles,
+      global.task.buildStylesCustom,
+      global.task.buildStylesVendors,
+    ),
+    gulp.series(
+      global.task.buildJs,
+    ),
+  ),
+  global.task.buildImages,
+  global.task.copyFiles,
+  global.task.copyFilesProd,
+));
