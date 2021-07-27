@@ -59,10 +59,10 @@ $media-expressions: (
   --color-coral: #e6726f;
 
   // Fonts
-  --font-sans-serif: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-headings: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
   --font-serif: 'Quicksand', 'Times', Baskerville, 'Georgia', serif;
-  --font-sans: 'Droid Serif', 'Helvetica Neue', 'Helvetica', sans-serif;
-  --font-content: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-sans-serif: 'Droid Serif', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-body: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 
   @font-face {
     font-family: 'Droid Serif';

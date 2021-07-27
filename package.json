@@ -65,6 +65,7 @@
     "lint": "npm run lint-html lint-js"
   },
   "dependencies": {
+    "gulp-concat": "^2.6.1",
     "jquery": "3.5.1",
     "normalize.css": "8.0.1"
   }
