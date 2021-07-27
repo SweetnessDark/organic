@@ -1,0 +1,13 @@
+.dropbtn {
+    border: none;
+    color: var(--color-white);
+    background-color: transparent;
+    font-weight: var(--weight-navigation);
+    cursor: pointer;
+  
+    &:after {
+      content: '▼';
+      margin-left: 15px;
+  }
+
+}

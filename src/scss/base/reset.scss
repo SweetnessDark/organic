@@ -20,6 +20,10 @@ body {
   min-width: var(--base-min-width);
 }
 
+a {
+  text-decoration: none;
+}
+
 // adaptive images
 img {
   max-width: 100%;

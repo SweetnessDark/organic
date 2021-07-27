@@ -1,0 +1,17 @@
+.nav-list {
+    @extend %listreset;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(24%,-50%);
+
+    li {
+        padding-left: 57px;
+
+        a {
+            color: var(--color-white);
+            font: var(--weight-navigation) var(--size-navigation) var(--font-headings);
+        }
+    }
+}
