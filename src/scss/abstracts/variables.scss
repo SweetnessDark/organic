@@ -71,6 +71,13 @@ $media-expressions: (
     font-style: normal;
 }
 
+  // Font Weight and Size
+  --weight-banner-heading: 300;
+  --size-banner-heading: 52px/1;
+
+  --weight-banner-content: 300;
+  --size-banner-content: 14px/25px;
+
   // Body base
   --base-background-color: var(--color-white);
   --base-font-family: var(--font-sans-serif);

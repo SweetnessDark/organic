@@ -1,0 +1,23 @@
+.banner {
+
+    .holder {
+        position: absolute;
+        top: 44%;
+        left: 34%;
+        transform: translate(-50%, -50%);
+        max-width: 388px;
+    
+    }
+
+    h1 {
+        color: var(--color-white);
+        text-shadow: 1px 0 1em var(--color-black);
+        font: var(--weight-banner-heading) var(--size-banner-heading) var(--font-headings);
+    }
+
+    p {
+        color: var(--color-white);
+        text-shadow: 1px 0 1em var(--color-black);
+        font: var(--weight-banner-content) var(--size-banner-content) var(--font-headings);
+    }
+}
