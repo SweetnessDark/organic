@@ -1,13 +1,28 @@
-.dropbtn {
-    border: none;
-    color: var(--color-white);
-    background-color: transparent;
-    font-weight: var(--weight-navigation);
-    cursor: pointer;
-  
-    &:after {
-      content: '▼';
-      margin-left: 15px;
-  }
+.btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    display: inline-block;
+    line-height: 1;
 
+    &-hamburger {
+        display: none;
+        float: right;
+        position: relative;
+        padding: 17px;
+        background-color: transparent;
+        z-index: 101;
+
+        &:hover,
+        &:active,
+        &.is-opened {
+            background-color: transparent;
+
+        }
+
+        @media (max-width: 480px) {
+            display: block;
+        }
+    } 
 }

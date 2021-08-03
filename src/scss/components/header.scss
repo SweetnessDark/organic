@@ -1,9 +1,33 @@
 .header {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 999;
+    background-color: transparent;
+    transition: 250ms linear;
 
-    .logo {
-        padding-top: 21px;
-        padding-left: 25px;
+    &.fixed {
+        background-color: var(--color-coral);
+        transition: 250ms linear;
+
+        .nav-list {
+            background-color: var(--color-coral);
+
+            @media (max-width: 480px) {
+                background-color: transparent;
+            }
+        }
+
+        @media (max-width: 480px) {
+            background-color: transparent;
+        }
+
     }
+
+    .container {
+        padding-top: 49px;
+        padding-left: 125px;
+    }
+
 }

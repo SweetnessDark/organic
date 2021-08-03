@@ -1,49 +1,7 @@
-<section class="header">
-    <div class="logo">
-        <img src="../../images/img-logo.png" alt="Organic">
-    </div>
+<header class="header">
+    @@include('../partials/components/logo.html')
     <div class="container">
-        <nav class="nav-list">
-            <li class="dropdown">
-                <button class="dropbtn">Commercial</button>
-                <div class="dropdown-content">
-                        <a href="#">Commercial</a>
-                        <a href="#">Industrial</a>
-                        <a href="#">Resources</a>
-                        <a href="#">Crops</a>
-                        <a href="#">Utilities</a>
-                    </div>
-            </li>
-            <li class="dropdown">
-                <button class="dropbtn">Industrial</button>
-                    <div class="dropdown-content">
-                        <a href="#">Commercial</a>
-                        <a href="#">Industrial</a>
-                        <a href="#">Resources</a>
-                        <a href="#">Crops</a>
-                        <a href="#">Utilities</a>
-                        <a href="#">Industrial</a>
-                        <a href="#">Infrastructure</a>
-                    </div>
-            </li>
-            <li class="dropdown">
-                <button class="dropbtn">Infrastructure</button>
-                    <div class="dropdown-content">
-                        <a href="#">Commercial</a>
-                        <a href="#">Industrial</a>
-                        <a href="#">Resources</a>
-                        <a href="#">Crops</a>
-                        <a href="#">Utilities</a>
-                        <a href="#">Infrastructure</a>
-                        <a href="#">Commercial</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="">Resources</a>
-                </li>
-                <li>
-                    <a href="">Utilities</a>
-                </li>
-        </nav>
+        @@include('../partials/components/nav.html')
+        @@include('../partials/components/button.html')
     </div>
-</section>
+</header>
