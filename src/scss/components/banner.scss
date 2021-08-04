@@ -1,15 +1,40 @@
 .banner {
+    min-height: 100vh;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+    }
+
+    &:before {
+        height: 51px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:after {
+        height: 34px;
+        background-color: var(--color-white);
+        transform: translate(0, 39px) rotate(1deg);
+    }
 
     .holder {
         position: absolute;
-        top: 44%;
-        left: 34%;
+        top: 59%;
+        left: 39%;
         transform: translate(-50%, -50%);
-        max-width: 388px;
-    
+        max-width: 392px;
+        z-index: 50;
+
     }
 
     h1 {
+        margin-bottom: 12px;
         color: var(--color-white);
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-heading) var(--size-banner-heading) var(--font-headings);
@@ -19,5 +44,6 @@
         color: var(--color-white);
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-content) var(--size-banner-content) var(--font-headings);
+        letter-spacing: 0.2px;
     }
 }
