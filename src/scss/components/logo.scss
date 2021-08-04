@@ -1,11 +1,7 @@
 .logo {
-    margin-top: 21px;
-    margin-bottom: 19px;
-    margin-left: 25px;
-    float: left;
-
-    @media (max-width: 480px) {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
+    position: absolute;
+    top: 21px;
+    left: 25px;
+    bottom: 19px;
+    z-index: 101;
 }

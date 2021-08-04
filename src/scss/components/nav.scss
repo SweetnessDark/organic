@@ -7,14 +7,14 @@
 
     &.is-opened {
         position: fixed;
-        top: 20%;
+        top: 0;
         bottom: 0;
-        left: 10%;
+        left: 0;
+        right: 0;
         z-index: 100;
         display: flex;
         justify-content: center;
         background: var(--color-black);
 
     }
-
 }

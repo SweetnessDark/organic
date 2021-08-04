@@ -8,35 +8,6 @@
         justify-content: center;
 
     }
-    
-    li {
-        margin-left: 75px;
-
-        @media (max-width: 480px) {
-            margin-left: 0;
-            margin-bottom: 12px;
-        }
-        
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:nth-child(4) {
-            margin-left: 68px;
-
-            @media (max-width: 480px) {
-                margin-left: 0;
-            }
-        }
-
-        &:last-child {
-            margin-left: 55px;
-
-            @media (max-width: 480px) {
-                margin-left: 0;
-            }
-        }
-    }
 
     a {
         color: var(--color-white);
@@ -58,7 +29,7 @@
         z-index: 90;
         border-radius: 3px;
 
-        li {
+        .nav-item {
             margin-left: 15px;
             margin-bottom: 12px;
         }

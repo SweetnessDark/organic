@@ -25,7 +25,7 @@ $(() => {
       var header = $('.header'),
           scroll = $(window).scrollTop();
     
-      if (scroll >= 100) header.addClass('fixed');
-      else header.removeClass('fixed');
+      if (scroll >= 100) header.addClass('is-header-fixed');
+      else header.removeClass('is-header-fixed');
     });
 });

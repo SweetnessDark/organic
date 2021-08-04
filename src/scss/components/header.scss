@@ -5,11 +5,10 @@
     left: 0;
     z-index: 999;
     background-color: transparent;
-    transition: 250ms linear;
+    transition: background-color 250ms linear;
 
-    &.fixed {
+    &.is-header-fixed {
         background-color: var(--color-coral);
-        transition: 250ms linear;
 
         .nav-list {
             background-color: var(--color-coral);
