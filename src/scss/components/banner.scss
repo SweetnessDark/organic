@@ -13,19 +13,20 @@
     }
 
     &:before {
-        height: 51px;
+        height: 60px;
         background-color: rgba(255, 255, 255, 0.5);
     }
 
     &:after {
-        height: 34px;
+        bottom: 30px;
+        height: 40px;
         background-color: var(--color-white);
         transform: translate(0, 39px) rotate(1deg);
     }
 
     .holder {
         position: absolute;
-        top: 59%;
+        top: 45%;
         left: 39%;
         transform: translate(-50%, -50%);
         max-width: 392px;
@@ -34,7 +35,7 @@
     }
 
     h1 {
-        margin-bottom: 12px;
+        margin-bottom: 22px;
         color: var(--color-white);
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-heading) var(--size-banner-heading) var(--font-headings);
