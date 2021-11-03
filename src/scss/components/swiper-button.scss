@@ -1,0 +1,28 @@
+:root {
+  --swiper-navigation-size: 6px;
+}
+.swiper-button-prev {
+  left: 31.2%;
+  background-color: #fe992a;
+}
+
+.swiper-button-next {
+  right: 0;
+  left: 33%;
+  background-color: #fe992a;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 58%;
+  width: 25px;
+  height: 25px;
+  margin-top: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
