@@ -40,13 +40,19 @@ textarea {
   vertical-align: top;
 }
 
-button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
-  appearance: none;
-  border-radius: 0;
-  cursor: pointer;
-  font-family: var(--form-font-family);
-}
+// button,
+// input[type='button'],
+// input[type='reset'],
+// input[type='file'],
+// input[type='submit'] {
+//   background-color: transparent;
+//   font-weight: var(--weight-navigation);
+//   border: none;
+//   color: var(--color-white);
+//   cursor: pointer;
+
+//   &:after {
+//     content: '▼';
+//     margin-left: 15px;
+// }
+// }

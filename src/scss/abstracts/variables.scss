@@ -71,8 +71,17 @@ $media-expressions: (
     font-style: normal;
 }
 
+  //Font Weight and Font Size
+  --weight-navigation: 700;
+  --size-navigation: 15px;
+
+  @media (max-width: 480px) {
+    --weight-navigation: 700;
+    --size-navigation: 20px;
+  }
+
   // Body base
-  --base-background-color: var(--color-white);
+  --base-background-color: var(--color-black);
   --base-font-family: var(--font-sans-serif);
   --base-font-size: 1.6rem;
   --base-line-height: 1.2;
