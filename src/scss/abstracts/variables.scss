@@ -71,6 +71,18 @@ $media-expressions: (
     font-style: normal;
 }
 
+  // Font Weight and Size
+  --weight-banner-heading: 300;
+  --size-banner-heading: 52px/65px;
+
+  @media (max-width: 480px) {
+    --weight-banner-heading: 300;
+    --size-banner-heading: 25px/40px;
+  }
+
+  --weight-banner-content: 300;
+  --size-banner-content: 14px/25px;
+
   //Font Weight and Font Size
   --weight-navigation: 700;
   --size-navigation: 15px;
