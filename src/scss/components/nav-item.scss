@@ -1,0 +1,52 @@
+.nav-item {
+    margin-left: 75px;
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+    
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &.nav-item-has-children {
+        position: relative;
+        transition: 250ms linear;
+    
+        @media (max-width: 480px) {
+            &:nth-child(-n+3) {
+                &:active,
+                &:hover {
+                    margin-bottom: 155px;
+                }
+            }
+        }
+    
+        //Селекторы > + ~ * css
+    
+        & > a span {
+            position: relative;
+    
+            &:after {
+                content: '';
+                position: absolute;
+                //Высота треугольника
+                top: 14%;
+                right: 0;
+                //Лево треугольника
+                left: 104%;
+                background: url('/images/icon-arrow-down.svg') no-repeat 0 0/cover;
+                width: 15px;
+                height: 15px;
+                display: block;
+            }
+        }
+        
+        &:hover {
+            .nav-list {
+                display: block;
+            }
+        }
+    }
+}
