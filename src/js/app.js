@@ -28,4 +28,12 @@ $(() => {
       if (scroll >= 100) header.addClass('is-header-fixed');
       else header.removeClass('is-header-fixed');
     });
+
+    $(window).scroll(function(){
+      var logo = $('.logo'),
+          scroll = $(window).scrollTop();
+    
+      if (scroll >= 100) logo.addClass('is-logo-fixed');
+      else logo.removeClass('is-logo-fixed');
+    });
 });

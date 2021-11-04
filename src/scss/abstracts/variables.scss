@@ -71,17 +71,6 @@ $media-expressions: (
     font-weight: 700;
     font-style: normal;
 }
-
- // Font Style
- --font-style-of-quotes: italic;
- --font-weight-of-quotes: 400;
- --font-size-of-quotes: 20px;
-
- --font-weight-of-wysiwyg-heading: 400;
- --font-size-of-wisiwyg-heading: 24px;
-
- --font-weight-of-wysiwyg: 400;
- --font-size-of-wysiwyg: 14px/28px;
   
   // Font Weight and Size
   --weight-banner-heading: 300;
@@ -104,8 +93,18 @@ $media-expressions: (
     --size-navigation: 20px;
   }
 
+  --font-style-of-quotes: italic;
+  --font-weight-of-quotes: 400;
+  --font-size-of-quotes: 20px;
+ 
+  --font-weight-of-wysiwyg-heading: 400;
+  --font-size-of-wisiwyg-heading: 24px;
+ 
+  --font-weight-of-wysiwyg: 400;
+  --font-size-of-wysiwyg: 14px/28px;
+
   // Body base
-  --base-background-color: var(--color-black);
+  --base-background-color: var(--color-white);
   --base-font-family: var(--font-sans-serif);
   --base-font-size: 1.6rem;
   --base-line-height: 1.2;

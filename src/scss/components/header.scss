@@ -18,6 +18,12 @@
             }
         }
 
+        .container {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            transition: 250ms linear;
+        }
+
         @media (max-width: 480px) {
             background-color: transparent;
         }
@@ -26,6 +32,7 @@
 
     .container {
         padding-top: 49px;
+        padding-bottom: 49px;
         padding-left: 125px;
     }
 
