@@ -5,7 +5,6 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const gcmq = require('postcss-sort-media-queries');
 const cssnano = require('cssnano');
@@ -34,7 +33,6 @@ module.exports = function () {
       return gulp.src(files, { sourcemaps: !production })
         .pipe(sass.sync({ sourceMap: !production, }))
         .on('error', (error) => notifier.error(error.message, 'Custom Sass compiling error', done))
-        .pipe(postcss(plugins))
         .pipe(gulp.dest(`./${global.folder.dev}/css`, { sourcemaps: './' }));
     }
 

@@ -57,6 +57,7 @@ $media-expressions: (
   --color-orange-transparent: #ffba6e;
   --color-light: #737c85;
   --color-coral: #e6726f;
+  --color-light-gray: #eaeaea;
 
   // Fonts
   --font-headings: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -71,6 +72,17 @@ $media-expressions: (
     font-style: normal;
 }
 
+ // Font Style
+ --font-style-of-quotes: italic;
+ --font-weight-of-quotes: 400;
+ --font-size-of-quotes: 20px;
+
+ --font-weight-of-wysiwyg-heading: 400;
+ --font-size-of-wisiwyg-heading: 24px;
+
+ --font-weight-of-wysiwyg: 400;
+ --font-size-of-wysiwyg: 14px/28px;
+  
   // Font Weight and Size
   --weight-banner-heading: 300;
   --size-banner-heading: 52px/65px;
