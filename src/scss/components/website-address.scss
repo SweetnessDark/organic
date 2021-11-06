@@ -1,0 +1,13 @@
+.website-address {
+    @extend %listreset;
+    padding: 39px 0 0 0;
+
+    li {
+        color: var(--color-white);
+        font: var(--font-weight-footer-dashboard-heading) var(--font-size-footer-contact) var(--font-sans-serif);
+        a {
+            color: var(--color-white);
+            font: var(--font-weight-footer-contact) var(--font-size-footer-contact) var(--font-sans-serif);
+        }
+    }
+}

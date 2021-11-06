@@ -1,0 +1,20 @@
+.list-item {
+    display: flex;
+    padding: 50px 0 0 0;
+
+    ul {
+        @extend %listreset;
+        padding: 0 60px 0 0;
+
+        li {
+            padding: 0 0 15px 0;
+            color: var(--color-white);
+            font: var(--font-weight-footer-dashboard-heading) var(--font-size-footer-dashboard) var(--font-sans-serif);
+
+            a {
+                color: var(--color-white);
+                font: var(--font-weight-footer-dashboard) var(--font-size-footer-dashboard) var(--font-sans-serif);
+            }
+        }
+    }
+}

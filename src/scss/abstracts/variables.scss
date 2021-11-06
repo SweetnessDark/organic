@@ -71,8 +71,16 @@ $media-expressions: (
     font-weight: 700;
     font-style: normal;
 }
-  
-  // Font Weight and Size
+
+  //Font Weight and Font Size
+  --weight-navigation: 700;
+  --size-navigation: 15px;
+
+  @media (max-width: 480px) {
+    --weight-navigation: 700;
+    --size-navigation: 20px;
+  }
+
   --weight-banner-heading: 300;
   --size-banner-heading: 52px/65px;
 
@@ -84,15 +92,6 @@ $media-expressions: (
   --weight-banner-content: 300;
   --size-banner-content: 14px/25px;
 
-  //Font Weight and Font Size
-  --weight-navigation: 700;
-  --size-navigation: 15px;
-
-  @media (max-width: 480px) {
-    --weight-navigation: 700;
-    --size-navigation: 20px;
-  }
-
   --font-style-of-quotes: italic;
   --font-weight-of-quotes: 400;
   --font-size-of-quotes: 20px;
@@ -102,6 +101,13 @@ $media-expressions: (
  
   --font-weight-of-wysiwyg: 400;
   --font-size-of-wysiwyg: 14px/28px;
+
+  --font-weight-footer-contact: 400;
+  --font-size-footer-contact: 12px;
+
+  --font-weight-footer-dashboard-heading: 700;
+  --font-weight-footer-dashboard: 400;
+  --font-size-footer-dashboard: 12px;
 
   // Body base
   --base-background-color: var(--color-white);
