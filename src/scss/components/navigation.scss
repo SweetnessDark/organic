@@ -1,0 +1,28 @@
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+
+    ul {
+        @extend %listreset;
+        padding-right: 60px;
+
+        li {
+            padding-bottom: 15px;
+        }
+
+        a {
+            color: var(--color-white);
+            font: var(--font-weight-footer-navigation)var(--font-size-footer-navigation) var(--font-sans-serif);
+
+                        
+            &.navigation-link {
+                font: var(--font-weight-footer-navigation-heading) var(--font-size-footer-navigation) var(--font-sans-serif);
+            }
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

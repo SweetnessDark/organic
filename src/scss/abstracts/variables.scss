@@ -103,11 +103,11 @@ $media-expressions: (
   --font-size-of-wysiwyg: 14px/28px;
 
   --font-weight-footer-contact: 400;
-  --font-size-footer-contact: 12px;
+  --font-size-footer-contact: 12px/1;
 
-  --font-weight-footer-dashboard-heading: 700;
-  --font-weight-footer-dashboard: 400;
-  --font-size-footer-dashboard: 12px;
+  --font-weight-footer-navigation-heading: 700;
+  --font-weight-footer-navigation: 400;
+  --font-size-footer-navigation: 12px/1;
 
   // Body base
   --base-background-color: var(--color-white);
