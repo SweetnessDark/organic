@@ -235,3 +235,13 @@ $animation-speed: 0.3s !default;
   max-width: var(--container-desktop-width);
   margin: 0 auto;
 }
+
+@mixin a {
+    a {
+      color: inherit;
+
+      &:hover {
+        opacity: 0.5;
+    }
+  }
+}

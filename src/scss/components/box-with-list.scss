@@ -1,0 +1,24 @@
+.box-with-list {
+    @extend %listreset;
+    padding-right: 60px;
+    color: var(--color-white);
+    font-family: var(--font-weight-footer-navigation);
+    font-size: var(--font-size-footer-navigation);
+    line-height: 1;
+
+    li {
+        padding-bottom: 15px;
+    }
+
+    a {
+        color: inherit;
+                    
+        &.navigation-link {
+            font: var(--font-weight-footer-navigation-heading);
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

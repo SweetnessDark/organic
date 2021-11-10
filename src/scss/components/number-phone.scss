@@ -1,10 +1,13 @@
 .number-phone {
     @extend %listreset;
+    color: var(--color-white);
+    font-weight: var(--font-weight-footer-contact);
+    font-size: var(--font-size-footer-contact);
+    line-height: 1;
 
-    li {
-        a {
-            color: var(--color-white);
-            font: var(--font-weight-footer-contact) var(--font-size-footer-contact) var(--font-sans-serif);
-        }
+    li:not(:last-child) {
+        margin-bottom: 2px;
     }
+
+    @include a;
 }

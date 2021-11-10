@@ -93,21 +93,21 @@ $media-expressions: (
   --size-banner-content: 14px/25px;
 
   --font-style-of-quotes: italic;
-  --font-weight-of-quotes: 400;
+  --font-weight-of-quotes: var(--same-font-weight);
   --font-size-of-quotes: 20px;
  
-  --font-weight-of-wysiwyg-heading: 400;
+  --font-weight-of-wysiwyg-heading: var(--same-font-weight);
   --font-size-of-wisiwyg-heading: 24px;
  
-  --font-weight-of-wysiwyg: 400;
+  --font-weight-of-wysiwyg: var(--same-font-weight);
   --font-size-of-wysiwyg: 14px/28px;
 
-  --font-weight-footer-contact: 400;
-  --font-size-footer-contact: 12px/1;
+  --font-weight-footer-contact: var(--same-font-weight);
+  --font-size-footer-contact: var(--same-font-size);
 
   --font-weight-footer-navigation-heading: 700;
-  --font-weight-footer-navigation: 400;
-  --font-size-footer-navigation: 12px/1;
+  --font-weight-footer-navigation: var(--same-font-weight);
+  --font-size-footer-navigation: var(--same-font-size);
 
   // Body base
   --base-background-color: var(--color-white);
@@ -145,6 +145,10 @@ $media-expressions: (
   --headings-sizes-h4: 2.1rem;
   --headings-sizes-h5: 1.7rem;
   --headings-sizes-h6: 1.5rem;
+
+  // Font size and weight
+  --same-font-weight: 400;
+  --same-font-size: 12px;
 
   // Layout
   --container-desktop-horizontal-padding: 5px;
