@@ -1,14 +1,10 @@
 .website-address {
-    @extend %listreset;
+    @include font-options;
     padding-top: 39px;
-    color: var(--color-white);
-    font-weight: var(--font-weight-footer-contact);
-    font-size: var(--font-size-footer-contact);
-    line-height: 1;
 
     li {
         font-weight: var(--font-weight-footer-dashboard-heading);
     }
 
-    @include a;
+    @include text-options;
 }

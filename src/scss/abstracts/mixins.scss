@@ -236,7 +236,7 @@ $animation-speed: 0.3s !default;
   margin: 0 auto;
 }
 
-@mixin a {
+@mixin text-options {
     a {
       color: inherit;
 
@@ -244,4 +244,12 @@ $animation-speed: 0.3s !default;
         opacity: 0.5;
     }
   }
+}
+
+@mixin font-options {
+  @extend %listreset;
+  color: var(--color-white);
+  font-weight: var(--font-weight-footer-contact);
+  font-size: var(--font-size-footer-contact);
+  line-height: 1;
 }
