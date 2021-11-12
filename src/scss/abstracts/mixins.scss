@@ -246,6 +246,7 @@ $animation-speed: 0.3s !default;
   }
 }
 
+
 @mixin font-options {
   @extend %listreset;
   color: var(--color-white);
