@@ -1,0 +1,10 @@
+.footer {
+    background-color: var(--color-coral);
+    padding-bottom: 224px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+}

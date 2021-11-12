@@ -1,0 +1,9 @@
+.number-phone {
+    @include font-options;
+
+    li:not(:last-child) {
+        margin-bottom: 2px;
+    }
+
+    @include text-options;
+}

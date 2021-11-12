@@ -1,0 +1,10 @@
+.website-address {
+    @include font-options;
+    padding-top: 39px;
+
+    li {
+        font-weight: var(--font-weight-footer-dashboard-heading);
+    }
+
+    @include text-options;
+}

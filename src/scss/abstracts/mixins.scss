@@ -235,3 +235,21 @@ $animation-speed: 0.3s !default;
   max-width: var(--container-desktop-width);
   margin: 0 auto;
 }
+
+@mixin text-options {
+    a {
+      color: inherit;
+
+      &:hover {
+        opacity: 0.5;
+    }
+  }
+}
+
+@mixin font-options {
+  @extend %listreset;
+  color: var(--color-white);
+  font-weight: var(--font-weight-footer-contact);
+  font-size: var(--font-size-footer-contact);
+  line-height: 1;
+}

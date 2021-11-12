@@ -1,0 +1,14 @@
+.box-with-list {
+    @include font-options;
+    padding-right: 60px;
+
+    li {
+        padding-bottom: 15px;
+    }
+
+    @include text-options;
+         
+    a.navigation-link {
+       font-weight: var(--font-weight-footer-navigation-heading);
+    }
+}
