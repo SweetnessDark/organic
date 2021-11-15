@@ -38,6 +38,8 @@
         transform: translate(-50%, -50%);
         max-width: 392px;
         z-index: 50;
+        color: var(--color-white);
+        line-height: 1;
 
         @media (max-width: 480px) {
             top: 30%;
@@ -50,7 +52,7 @@
 
     h1 {
         margin-bottom: 22px;
-        color: var(--color-white);
+        color: inherit;
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-heading) var(--size-banner-heading) var(--font-headings);
 
@@ -60,7 +62,7 @@
     }
 
     p {
-        color: var(--color-white);
+        color: inherit;
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-content) var(--size-banner-content) var(--font-headings);
         letter-spacing: 0.2px;

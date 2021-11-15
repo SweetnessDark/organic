@@ -21,19 +21,21 @@ $(() => {
       $nav.toggleClass(NAVIGATION_ACTIVE_CLASS_NAME);
     });
 
-    $(window).scroll(function(){
-      var header = $('.header'),
-          scroll = $(window).scrollTop();
-    
-      if (scroll >= 100) header.addClass('is-header-fixed');
-      else header.removeClass('is-header-fixed');
-    });
+    const $header = $('.header');
+    const $logo = $('.logo');
+    const HEADER_SCROLL_CLASS_NAME = 'is-header-fixed';
+    const LOGO_SCROLL_CLASS_NAME = 'is-logo-fixed';
 
-    $(window).scroll(function(){
-      var logo = $('.logo'),
-          scroll = $(window).scrollTop();
+    $(window).on('scroll', () => {
+      scroll = $(window).scrollTop();
     
-      if (scroll >= 100) logo.addClass('is-logo-fixed');
-      else logo.removeClass('is-logo-fixed');
+      if (scroll >= 100) {
+        $header.addClass(HEADER_SCROLL_CLASS_NAME);
+        $logo.addClass(LOGO_SCROLL_CLASS_NAME);
+      }
+      else {
+        $header.removeClass(HEADER_SCROLL_CLASS_NAME);
+        $logo.removeClass(LOGO_SCROLL_CLASS_NAME);
+      }
     });
 });

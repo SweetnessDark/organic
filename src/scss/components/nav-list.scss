@@ -1,7 +1,9 @@
 .nav-list {
     @extend %listreset;
     display: flex;
+    color: var(--color-white);
     font: var(--weight-navigation) var(--size-navigation) var(--font-headings);
+    line-height: 1;
 
     @media (max-width: 480px) {
         flex-direction: column;
@@ -9,14 +11,7 @@
 
     }
 
-    a {
-        color: var(--color-white);
-
-        &:hover,
-        &:active {
-            opacity: 0.5;
-        }
-    }
+    @include text-options;
 
     & .nav-list {
         display: none;

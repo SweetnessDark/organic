@@ -3,22 +3,24 @@
     color: var(--color-orange);
     font: var(--font-style-of-quotes) var(--font-weight-of-quotes) var(--font-size-of-quotes) var(--font-headings);
 
+    &:before,
+    &:after {
+        position: absolute;
+        font-size: 50px;
+    }
+    
     &:before {
         content: '\201c';
-        position: absolute;
         top: -11px;
-        font-size: 50px;
     }
 
     &:after {
         content: '\201d';
-        position: absolute;
         top: 86%;
         left: 59%;
-        font-size: 50px;
     }
 
-    P {
+    p {
         margin-top: 20px;
     }
 
