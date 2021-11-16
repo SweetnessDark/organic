@@ -1,12 +1,12 @@
 .box-with-list {
-    @include font-options;
+    @extend %listreset;
     padding-right: 60px;
 
     li {
         padding-bottom: 15px;
     }
 
-    @include text-options;
+    @include link-with-hover;
          
     a.navigation-link {
        font-weight: var(--font-weight-footer-navigation-heading);

@@ -1,25 +1,28 @@
 .holder-quotes {
-    padding: 0 45px 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
     color: var(--color-orange);
     font: var(--font-style-of-quotes) var(--font-weight-of-quotes) var(--font-size-of-quotes) var(--font-headings);
+    position: relative;
 
+    &:before,
+    &:after {
+        position: absolute;
+        font-size: 50px;
+    }
+    
     &:before {
         content: '\201c';
-        position: absolute;
         top: -11px;
-        font-size: 50px;
     }
 
     &:after {
         content: '\201d';
-        position: absolute;
-        top: 86%;
-        left: 59%;
-        font-size: 50px;
+        bottom: 0;
+        left: 45%;
     }
 
-    P {
-        margin-top: 20px;
+    p {
+        margin-bottom: 0;
     }
-
 }
