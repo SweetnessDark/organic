@@ -1,6 +1,9 @@
 .banner {
     min-height: 100vh;
     position: relative;
+    color: var(--color-white);
+    font: var(--weight-banner-content) var(--size-banner-content) var(--font-headings);
+    line-height: 25px;
 
     &:before,
     &:after {
@@ -25,7 +28,6 @@
     }
 
     .swiper-container {
-
         @media (max-width: 480px) {
             height: 100vh;
         }
@@ -38,8 +40,6 @@
         transform: translate(-50%, -50%);
         max-width: 392px;
         z-index: 50;
-        color: var(--color-white);
-        line-height: 1;
 
         @media (max-width: 480px) {
             top: 30%;
@@ -55,6 +55,7 @@
         color: inherit;
         text-shadow: 1px 0 1em var(--color-black);
         font: var(--weight-banner-heading) var(--size-banner-heading) var(--font-headings);
+        line-height: 65px;
 
         @media (max-width: 480px) {
             text-align: center;
@@ -62,9 +63,7 @@
     }
 
     p {
-        color: inherit;
         text-shadow: 1px 0 1em var(--color-black);
-        font: var(--weight-banner-content) var(--size-banner-content) var(--font-headings);
         letter-spacing: 0.2px;
 
         @media (max-width: 480px) {
@@ -73,8 +72,8 @@
             text-align: center;
         }
     }
+    
     img {
-
         @media (max-width: 480px) {
             height: 100%;
             object-fit: cover;

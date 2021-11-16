@@ -1,10 +1,10 @@
 .website-address {
-    @include font-options;
+    @extend %listreset;
     padding-top: 39px;
 
     li {
         font-weight: var(--font-weight-footer-dashboard-heading);
     }
 
-    @include text-options;
+    @include link-with-hover;
 }

@@ -1,17 +1,26 @@
-.content {
-    margin: 60px 0 87px 0;
-
+.content{
+    padding: 60px 0 87px;
+    
     .container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
-
-    .quotes-slider {
-        width: 310px;
+    
+    .sidebar {
+        width: 255px;
+        padding-right: 45px;
+        border-right: 1px solid var(--color-light-gray);
+    
+        .quotes-slider {
+            position: relative;
+            overflow: hidden;
+            top: -20px;
+        }
     }
-
-    .wysiwyg {
+    
+    .content-section {
+        padding-left: 60px;
         flex: 1;
     }
 }

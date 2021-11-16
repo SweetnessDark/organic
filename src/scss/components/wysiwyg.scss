@@ -1,13 +1,9 @@
 .wysiwyg {
-    margin: 20px 0 0 0;
-    padding-left: 60px;
-    padding-bottom: 94px;
-    border-left: 1px solid var(--color-light-gray);
 
     h3 {
         color: var(--color-orange);
         font: var(--font-weight-of-wysiwyg-heading) var(--font-size-of-wysiwyg-heading) var(--font-body);
-        margin: 0 0 28px 0;
+        margin-bottom: 28px;
     }
 
     p {

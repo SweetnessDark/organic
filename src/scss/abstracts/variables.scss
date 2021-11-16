@@ -86,11 +86,11 @@ $media-expressions: (
 
   @media (max-width: 480px) {
     --weight-banner-heading: 300;
-    --size-banner-heading: 25px/40px;
+    --size-banner-heading: 25px;
   }
 
   --weight-banner-content: 300;
-  --size-banner-content: 14px/25px;
+  --size-banner-content: 14px;
 
   --font-style-of-quotes: italic;
   --font-weight-of-quotes: var(--same-font-weight);
@@ -149,6 +149,9 @@ $media-expressions: (
   // Font size and weight
   --same-font-weight: 400;
   --same-font-size: 12px;
+
+  // Transition
+  --transition: 250ms;
 
   // Layout
   --container-desktop-horizontal-padding: 5px;
