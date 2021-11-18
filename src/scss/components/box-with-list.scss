@@ -1,9 +1,9 @@
 .box-with-list {
     @extend %listreset;
-    padding-right: 60px;
+    padding-right: 38px;
 
     li {
-        padding-bottom: 15px;
+        padding-bottom: 12px;
     }
 
     @include link-with-hover;

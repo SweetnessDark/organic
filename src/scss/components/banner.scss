@@ -16,15 +16,16 @@
     }
 
     &:before {
-        height: 60px;
+        height: 61px;
         background-color: rgba(255, 255, 255, 0.5);
+        transform: translate(0px, -5px) rotate(1deg);
     }
 
     &:after {
         bottom: 30px;
-        height: 40px;
+        height: 45px;
         background-color: var(--color-white);
-        transform: translate(0, 39px) rotate(1deg);
+        transform: translate(0, 42px) rotate(1.5deg);
     }
 
     .swiper-container {
@@ -35,7 +36,7 @@
 
     .holder {
         position: absolute;
-        top: 45%;
+        top: 39%;
         left: 39%;
         transform: translate(-50%, -50%);
         max-width: 392px;
@@ -74,6 +75,8 @@
     }
     
     img {
+        width: auto;
+        height: 920px;
         @media (max-width: 480px) {
             height: 100%;
             object-fit: cover;

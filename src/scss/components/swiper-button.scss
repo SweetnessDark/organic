@@ -2,12 +2,12 @@
   --swiper-navigation-size: 6px;
 }
 .swiper-button-prev {
-  left: 76.2%;
+  left: 72.2%;
   background-color: #fe992a;
 }
 
 .swiper-button-next {
-  right: 0;
+  right: 14px;
   background-color: #fe992a;
 }
 
@@ -15,15 +15,19 @@
 .swiper-button-next {
   position: absolute;
   top: auto;
-  width: 25px;
-  height: 25px;
-  margin-top: 40px;
+  width: 30px;
+  height: 30px;
+  margin-top: 39px;
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
+
+  &.swiper-button-disabled {
+    opacity: 0.65;
+  }
 
   &:hover {
     opacity: 0.8;

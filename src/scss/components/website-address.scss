@@ -4,6 +4,8 @@
 
     li {
         font-weight: var(--font-weight-footer-dashboard-heading);
+        margin-bottom: 13px;
+        letter-spacing: 0.3px;
     }
 
     @include link-with-hover;
