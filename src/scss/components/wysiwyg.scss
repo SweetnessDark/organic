@@ -1,0 +1,37 @@
+.wysiwyg {
+
+    h1, .h1 {
+        font-size: var(--headings-sizes-wysiwyg-h1);
+    }
+
+    h2, .h2 {
+        font-size: var(--headings-sizes-wysiwyg-h2);
+    }
+
+    h3, .h3 {
+        font-size: var(--headings-sizes-wysiwyg-h3);
+    }
+
+    h4, .h4 {
+        font-size: var(--headings-sizes-wysiwyg-h4);
+    }
+
+    h5, .h5 {
+        font-size: var(--headings-sizes-wysiwyg-h5);
+    }
+
+    h6, .h6 {
+        font-size: var(--headings-sizes-wysiwyg-h6);
+    }
+
+    h3 {
+        margin-bottom: 28px;
+        color: var(--color-orange);
+        font: var(--font-weight-of-wysiwyg-heading) var(--font-size-of-wysiwyg-heading) var(--font-body);
+    }
+
+    p {
+        color: var(--color-light);
+        font: var(--font-weight-of-wysiwyg) var(--font-size-of-wysiwyg) var(--font-body);
+    }
+}

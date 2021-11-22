@@ -57,6 +57,7 @@ $media-expressions: (
   --color-orange-transparent: #ffba6e;
   --color-light: #737c85;
   --color-coral: #e6726f;
+  --color-light-gray: #eaeaea;
 
   // Fonts
   --font-headings: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -70,6 +71,44 @@ $media-expressions: (
     font-weight: 700;
     font-style: normal;
 }
+
+  //Font Weight and Font Size
+  --weight-navigation: 700;
+  --size-navigation: 15px;
+
+  @media (max-width: 480px) {
+    --weight-navigation: 700;
+    --size-navigation: 20px;
+  }
+
+  --weight-banner-heading: 300;
+  --size-banner-heading: 52px/65px;
+
+  @media (max-width: 480px) {
+    --weight-banner-heading: 300;
+    --size-banner-heading: 25px;
+  }
+
+  --weight-banner-content: 300;
+  --size-banner-content: 14px;
+
+  --font-style-of-quotes: italic;
+  --font-weight-of-virgule: 700;
+  --font-weight-of-quotes: var(--same-font-weight);
+  --font-size-of-quotes: 20px;
+ 
+  --font-weight-of-wysiwyg-heading: var(--same-font-weight);
+  --font-size-of-wysiwyg-heading: 24px; //h2.26 на 2 пикселя выше или ниже
+ 
+  --font-weight-of-wysiwyg: var(--same-font-weight);
+  --font-size-of-wysiwyg: 14px/28px;
+
+  --font-weight-footer-contact: var(--same-font-weight);
+  --font-size-footer-contact: var(--same-font-size);
+
+  --font-weight-footer-navigation-heading: 700;
+  --font-weight-footer-navigation: var(--same-font-weight);
+  --font-size-footer-navigation: var(--same-font-size);
 
   // Body base
   --base-background-color: var(--color-white);
@@ -100,6 +139,14 @@ $media-expressions: (
   --headings-font-family: var(--font-sans-serif);
   --headings-color: var(--base-text-color);
 
+  // Base font wysiwyg
+  --headings-sizes-wysiwyg-h1: 28px;
+  --headings-sizes-wysiwyg-h2: 26px;
+  --headings-sizes-wysiwyg-h3: 24px;
+  --headings-sizes-wysiwyg-h4: 22px;
+  --headings-sizes-wysiwyg-h5: 20px;
+  --headings-sizes-wysiwyg-h6: 18px;
+
   // Base font styles for headings
   --headings-sizes-h1: 3rem;
   --headings-sizes-h2: 2.7rem;
@@ -107,6 +154,13 @@ $media-expressions: (
   --headings-sizes-h4: 2.1rem;
   --headings-sizes-h5: 1.7rem;
   --headings-sizes-h6: 1.5rem;
+
+  // Font size and weight
+  --same-font-weight: 400;
+  --same-font-size: 12px;
+
+  // Transition
+  --transition: 250ms;
 
   // Layout
   --container-desktop-horizontal-padding: 5px;

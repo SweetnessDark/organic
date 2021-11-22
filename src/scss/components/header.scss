@@ -1,0 +1,44 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: transparent;
+    transition: background-color 250ms linear;
+
+    &.is-header-fixed {
+        background-color: var(--color-coral);
+
+        .nav-list {
+            background-color: var(--color-coral);
+
+            @media (max-width: 480px) {
+                background-color: transparent;
+            }
+        }
+
+        .container {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            transition: 250ms linear;
+        }
+
+        @media (max-width: 480px) {
+            background-color: transparent;
+        }
+
+        .logo {
+            top: 13px;
+            width: 40px;
+        }
+
+    }
+
+    .container {
+        padding-top: 49px;
+        padding-bottom: 49px;
+        padding-left: 125px;
+    }
+
+}

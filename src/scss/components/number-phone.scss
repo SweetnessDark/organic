@@ -1,0 +1,9 @@
+.number-phone {
+    @extend %listreset;
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    @include link-with-hover;
+}

@@ -1,0 +1,32 @@
+.nav-list {
+    @extend %listreset;
+    display: flex;
+    color: var(--color-white);
+    font: var(--weight-navigation) var(--size-navigation) var(--font-headings);
+    line-height: 1;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    @include link-with-hover;
+
+    & .nav-list {
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: auto;
+        padding-top: 25px;
+        min-width: 130px;
+        z-index: 90;
+        border-radius: 3px;
+
+        .nav-item {
+            margin-left: 15px;
+            margin-bottom: 12px;
+        }
+    }
+}

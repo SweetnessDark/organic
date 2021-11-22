@@ -1,0 +1,9 @@
+.logo {
+    position: absolute;
+    width: 73px;
+    top: 21px;
+    left: 25px;
+    bottom: 19px;
+    z-index: 101;
+    transition: top var(--transition) linear, width var(--transition) linear;
+}
