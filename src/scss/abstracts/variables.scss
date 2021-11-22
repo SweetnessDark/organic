@@ -98,7 +98,7 @@ $media-expressions: (
   --font-size-of-quotes: 20px;
  
   --font-weight-of-wysiwyg-heading: var(--same-font-weight);
-  --font-size-of-wysiwyg-heading: 24px;
+  --font-size-of-wysiwyg-heading: 24px; //h2.26 на 2 пикселя выше или ниже
  
   --font-weight-of-wysiwyg: var(--same-font-weight);
   --font-size-of-wysiwyg: 14px/28px;
@@ -138,6 +138,14 @@ $media-expressions: (
   // Headings base
   --headings-font-family: var(--font-sans-serif);
   --headings-color: var(--base-text-color);
+
+  // Base font wysiwyg
+  --headings-sizes-wysiwyg-h1: 28px;
+  --headings-sizes-wysiwyg-h2: 26px;
+  --headings-sizes-wysiwyg-h3: 24px;
+  --headings-sizes-wysiwyg-h4: 22px;
+  --headings-sizes-wysiwyg-h5: 20px;
+  --headings-sizes-wysiwyg-h6: 18px;
 
   // Base font styles for headings
   --headings-sizes-h1: 3rem;
